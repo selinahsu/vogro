@@ -38,16 +38,16 @@ function Navbar() {
               <a href="/" className={classes.navlink}>
                 HOME
               </a>
-              <a href="/" className={classes.navlink}>
+              <a href="/volunteering" className={classes.navlink}>
                 VOLUNTEERING
               </a>
-              <a href="/" className={classes.navlink}>
+              <a href="/elderly-and-at-risk" className={classes.navlink}>
                 ELDERLY + AT RISK
               </a>
-              <a href="/" className={classes.navlink}>
+              <a href="/faq" className={classes.navlink}>
                 FAQ
               </a>
-              <a href="/" className={classes.navlink}>
+              <a href="/contact-us" className={classes.navlink}>
                 CONTACT US
               </a>
             </nav>

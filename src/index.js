@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./components/navbar";
+import Home from "./pages/home";
+import Volunteering from "./pages/volunteering";
+import ElderlyAtRisk from "./pages/elderly-and-at-risk";
+import Faq from "./pages/faq";
+import ContactUs from "./pages/contact-us";
+
 import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
@@ -26,12 +33,28 @@ const theme = createMuiTheme({
   },
 });
 
+function App() {
+  return (
+    <main>
+      <Navbar />
+      <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/volunteering" component={Volunteering} />
+          <Route path="/elderly-and-at-risk" component={ElderlyAtRisk} />
+          <Route path="/faq" component={Faq} />
+          <Route path="/contact-us" component={ContactUs} />
+          <Route component={Error} />
+      </Switch>
+    </main>
+  )
+}
+
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <ThemeProvider theme={theme}>
       <App />
-      </ThemeProvider>
-  </React.StrictMode>,
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
