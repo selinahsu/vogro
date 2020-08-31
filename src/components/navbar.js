@@ -6,9 +6,10 @@ import logo from '../assets/logo.png';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
+    fontFamily: 'Quicksand',
     height: '100px',
     background: 'transparent', 
-    boxShadow: 'none'
+    boxShadow: 'none',
   },
   logo: {
     paddingTop: '30px',
@@ -30,8 +31,10 @@ function Navbar() {
     <AppBar position="relative" className={classes.appbar}>
       <Toolbar>
         <Grid container justify="space-between" alignItems="center">
-          <Grid item padding='10px'>
-            <img src={logo} alt="VoGro Logo" height="60" className={classes.logo}/>
+          <Grid item>
+            <a href="/">
+              <img src={logo} alt="VoGro Logo" height="60" className={classes.logo}/>
+            </a>
           </Grid>
           <Grid item>
             <nav>

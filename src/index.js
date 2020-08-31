@@ -19,6 +19,9 @@ const theme = createMuiTheme({
     primary: {
       main: '#eb5729',
     },
+    secondary: {
+      main: '#9e9e9e',
+    },
   },
   typography: {
     fontFamily: [
@@ -30,7 +33,26 @@ const theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
+    body1: {
+      lineHeight: '1.5em'
+    },
+    body2: {
+      lineHeight: '1.6em',
+      textAlign: "justify"
+    }
   },
+  overrides: {
+    MuiTypography: {
+      root: {
+        "& p": {
+          color: "blue"
+        },
+        "& h2": {
+          color: "red"
+        }
+      }
+    }
+  }
 });
 
 function App() {
@@ -38,12 +60,12 @@ function App() {
     <main>
       <Navbar />
       <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/volunteering" component={Volunteering} />
-          <Route path="/elderly-and-at-risk" component={ElderlyAtRisk} />
-          <Route path="/faq" component={Faq} />
-          <Route path="/contact-us" component={ContactUs} />
-          <Route component={Error} />
+        <Route path="/" component={Home} exact />
+        <Route path="/volunteering" component={Volunteering} />
+        <Route path="/elderly-and-at-risk" component={ElderlyAtRisk} />
+        <Route path="/faq" component={Faq} />
+        <Route path="/contact-us" component={ContactUs} />
+        <Route component={Error} />
       </Switch>
     </main>
   )
