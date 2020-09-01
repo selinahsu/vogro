@@ -34,7 +34,9 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     body1: {
-      lineHeight: '1.5em'
+      fontSize: '1em',
+      lineHeight: '1.5em',
+      textAlign: "left"
     },
     body2: {
       fontSize: '1em',

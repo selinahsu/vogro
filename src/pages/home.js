@@ -124,7 +124,7 @@ function Home() {
 				<Typography variant="h4" color="black" gutterBottom>
 					Thank you for your support.
 				</Typography>
-				<Typography variant="body1" color="black" gutterBottom>
+				<Typography variant="body2" color="black" gutterBottom>
 					Many people played a part in making VoGro possible. 
 					Thanks to our friends, and volunteers we have support us we were able to make 
 					VoGro possible and allow us to fight Covid-19 from a social perspective.

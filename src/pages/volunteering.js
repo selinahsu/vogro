@@ -82,7 +82,7 @@ function Volunteering() {
 			<Typography variant="h4" color="black" gutterBottom>
 				Thank you.
 			</Typography>
-			<Typography variant="body1" color="black" gutterBottom>
+			<Typography variant="body2" color="black" gutterBottom>
 				Our volunteers are everything to our platform, and we cannot thank you enough!
 			</Typography>
 			<div style={{ padding: 20 }}>
