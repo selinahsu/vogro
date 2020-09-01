@@ -10,6 +10,7 @@ import Volunteering from "./pages/volunteering";
 import ElderlyAtRisk from "./pages/elderly-and-at-risk";
 import Faq from "./pages/faq";
 import ContactUs from "./pages/contact-us";
+import Legal from "./pages/legal";
 
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -35,7 +36,7 @@ const theme = createMuiTheme({
     ].join(','),
     body1: {
       fontSize: '1em',
-      lineHeight: '1.5em',
+      lineHeight: '1.75em',
       textAlign: "left"
     },
     body2: {
@@ -68,6 +69,7 @@ function App() {
         <Route path="/elderly-and-at-risk" component={ElderlyAtRisk} />
         <Route path="/faq" component={Faq} />
         <Route path="/contact-us" component={ContactUs} />
+        <Route path="/legal" component={Legal} />
         <Route component={Error} />
       </Switch>
     </main>
