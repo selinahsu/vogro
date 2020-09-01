@@ -7,7 +7,6 @@ import safety from '../assets/safety.png';
 import rewards from '../assets/rewards.png';
 
 import { Container, Grid, Typography, Button } from '@material-ui/core';
-import { Card, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const volunteerPerks = [
@@ -35,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
   heroImage: {
 		padding: theme.spacing(6, 10, 0),
 	},
-	cards: {
-		padding: theme.spacing(4, 0)
+	offerSection: {
+		padding: theme.spacing(4, 0),
 	},
 	footer: {
 		padding: theme.spacing(10, 0, 5),
@@ -63,22 +62,16 @@ function Volunteering() {
 				<Typography variant="h4" color="primary" gutterBottom>
 					What VoGro Has to Offer Volunteers
 				</Typography>
-				<Grid container spacing={3} className={classes.cards}>
+				<Grid container spacing={5} className={classes.offerSection}>
 					{volunteerPerks.map((item) => (
 						<Grid item key={item} sm={12} md={4}>
-							<Grid container key={item} direction="column" justify="center">
-								<Card elevation={1}>
-									<CardContent>
-										<img src={ item.image } alt={ item.image } width="50%"/>
-										<Typography gutterBottom variant="h5" component="h2">
-											{ item.title }
-										</Typography>
-										<Typography variant="body2" color="textSecondary" component="p">
-											{ item.text }
-										</Typography>
-									</CardContent>
-								</Card>
-							</Grid>
+							<img src={ item.image } alt={ item.image } width="50%"/>
+							<Typography gutterBottom variant="h5" component="h2">
+								{ item.title }
+							</Typography>
+							<Typography variant="body2" color="black" component="p">
+								{ item.text }
+							</Typography>
 						</Grid>
 					))}
 				</Grid>

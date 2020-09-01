@@ -37,8 +37,9 @@ const theme = createMuiTheme({
       lineHeight: '1.5em'
     },
     body2: {
-      lineHeight: '1.6em',
-      textAlign: "justify"
+      fontSize: '1em',
+      lineHeight: '1.75em',
+      textAlign: "center"
     }
   },
   overrides: {

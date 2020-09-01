@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 	bold: {
 		fontWeight: 'bold'
 	},
-	infoSection: {
+	sectionBackground: {
 		backgroundColor: '#fbede9'
 	},
 	infoContent: {
@@ -79,22 +79,24 @@ function Home() {
 				</Grid>
       </Container>
 
-			<Container maxWidth="lg" className={classes.infoSection}>
-				<HomeInfo 
-					image={phone}
-					title={"What's VoGro?"}
-					description={"VoGro provides a platform to connect volunteers with those in need. Sign up as a volunteer or as someone who needs help and get connected. VoGro is focused on helping the elderly and those who are unable to perform actions due to the current COVID-19 environment."}
-					label={"Learn More"}
-					link={"/volunteering"}
-				/>
-				<HomeInfo 
-					image={friends}
-					title={"Who We Are"}
-					description={"We are a set of students from universities across Ontario looking to help those in need. As active volunteers we wanted to make volunteering as easy as possible for those who want to help. This pandemic isn't going away any time soon, so we want to help make life as normal as it could be in these uncertain times."}
-					label={"Contact Us"}
-					link={"/contact-us"}
-				/>
-			</Container>
+			<div className={classes.sectionBackground}>
+				<Container maxWidth="lg">
+					<HomeInfo 
+						image={phone}
+						title={"What's VoGro?"}
+						description={"VoGro provides a platform to connect volunteers with those in need. Sign up as a volunteer or as someone who needs help and get connected. VoGro is focused on helping the elderly and those who are unable to perform actions due to the current COVID-19 environment."}
+						label={"Learn More"}
+						link={"/volunteering"}
+					/>
+					<HomeInfo 
+						image={friends}
+						title={"Who We Are"}
+						description={"We are a set of students from universities across Ontario looking to help those in need. As active volunteers we wanted to make volunteering as easy as possible for those who want to help. This pandemic isn't going away any time soon, so we want to help make life as normal as it could be in these uncertain times."}
+						label={"Contact Us"}
+						link={"/contact-us"}
+					/>
+				</Container>
+			</div>
 
 			<Container maxWidth="md" align="center" className={classes.footer}>
 				<Typography variant="h4" color="black" gutterBottom gutterTop>
