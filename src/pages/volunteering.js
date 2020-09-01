@@ -86,7 +86,7 @@ function Volunteering() {
 				Our volunteers are everything to our platform, and we cannot thank you enough!
 			</Typography>
 			<div style={{ padding: 20 }}>
-				<Button variant="contained" size="large" color="primary" disableElevation href="https://www.tigweb.org" target="_blank">
+				<Button variant="contained" size="large" color="primary" disableElevation href="/legal">
 					PRIVACY AND TERMS OF CONDITIONS
 				</Button>
 			</div>

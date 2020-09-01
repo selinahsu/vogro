@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-function ElderlyAtRisk() {
+function Faq() {
   const classes = useStyles();
   return (
 		<>
@@ -60,7 +60,7 @@ function ElderlyAtRisk() {
 
 			<Container maxWidth="md" align="center" className={classes.footer}>
 				<div style={{ paddingTop: 60 }}>
-					<Button variant="contained" size="large" color="primary" disableElevation href="/privacy">
+					<Button variant="contained" size="large" color="primary" disableElevation href="/legal">
 						PRIVACY AND TERMS OF CONDITIONS
 					</Button>
 				</div>
@@ -69,4 +69,4 @@ function ElderlyAtRisk() {
   );
 }
 
-export default ElderlyAtRisk;
+export default Faq;

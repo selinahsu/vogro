@@ -48,7 +48,7 @@ function ElderlyAtRisk() {
 					/>
 				</div>
 				<div style={{ paddingTop: 60 }}>
-					<Button variant="contained" size="large" color="primary" disableElevation href="/privacy">
+					<Button variant="contained" size="large" color="primary" disableElevation href="/legal">
 						PRIVACY AND TERMS OF CONDITIONS
 					</Button>
 				</div>
