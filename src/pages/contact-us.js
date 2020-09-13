@@ -52,6 +52,7 @@ function ContactUs() {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
+                name="first name"
                 autoComplete="fname"
                 variant="outlined"
                 fullWidth
@@ -64,6 +65,7 @@ function ContactUs() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                name="last name"
                 autoComplete="lname"
                 variant="outlined"
                 fullWidth
@@ -76,6 +78,7 @@ function ContactUs() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                name="email"
                 type="email"
                 autoComplete="email"
                 variant="outlined"
@@ -89,8 +92,8 @@ function ContactUs() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <Select
+                name="message type"
                 variant="outlined"
-                label="Message Type"
                 fullWidth
                 open={open}
                 onClose={handleClose}
@@ -111,6 +114,7 @@ function ContactUs() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                name="message"
                 variant="outlined"
                 fullWidth
                 multiline
@@ -119,6 +123,9 @@ function ContactUs() {
               />
             </Grid>
           </Grid>
+          <div class="field">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
           <Button
             type="submit"
             variant="contained"
