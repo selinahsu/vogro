@@ -35,7 +35,7 @@ function ContactUs() {
 
   const classes = useStyles();
   return (
-    <div className={classes.form}>
+    <div className={classes.form} name="contact-us" method="POST" data-netlify="true">
       <Container maxWidth="md">
         <Typography variant="h4" color="black" gutterBottom>
           Contact Us
