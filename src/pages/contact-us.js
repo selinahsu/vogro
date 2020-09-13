@@ -13,6 +13,12 @@ const styles = theme => ({
   },
 });
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class ContactUs extends React.Component {
   state = {
     firstName: "",
@@ -34,6 +40,19 @@ class ContactUs extends React.Component {
     this.setState({ open: true })
   };
 
+  /* this allows for form submission on netlify */
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
   componentDidMount(){
     document.title = "Contact Us"
   }
@@ -50,7 +69,7 @@ class ContactUs extends React.Component {
           Having issues with our service? Want to reach out? Enter in your message and we'll get back to you shortly.
           </Typography>
 
-          <form className={classes.form}>
+          <form className={classes.form} onSubmit={this.handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
