@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../index.css';
 
 import { Container, Typography, Button } from '@material-ui/core';
@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Faq() {
+	useEffect(() => {
+		document.title = "FAQ";  
+  });
   const classes = useStyles();
   return (
 		<>

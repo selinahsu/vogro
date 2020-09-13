@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../index.css';
 
 import { Container, Typography } from '@material-ui/core';
@@ -15,7 +15,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Legal() {
-  const classes = useStyles();
+	const classes = useStyles();
+	useEffect(() => {
+		document.title = "Privacy Policy";  
+  });
   return (
 		<div className={classes.heroContent}>
 			<Container maxWidth="md">

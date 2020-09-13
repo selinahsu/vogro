@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../index.css';
 import BigButton from '../components/bigbutton.js';
 
@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
 
 function ElderlyAtRisk() {
   const classes = useStyles();
+  useEffect(() => {
+		document.title = "Elderly + At Risk";  
+  });
   return (
 		<>
 			<div className={classes.heroContent}>

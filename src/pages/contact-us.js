@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../index.css';
 
 import { Container, Typography, TextField, Select, MenuItem, Grid, Button } from '@material-ui/core';
@@ -32,6 +32,10 @@ function ContactUs() {
   const handleOpen = () => {
     setOpen(true);
   };
+
+  useEffect(() => {
+    document.title = "Contact Us";  
+  });
 
   const classes = useStyles();
   return (

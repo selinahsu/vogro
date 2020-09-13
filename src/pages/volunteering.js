@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../index.css';
 
 import helpOut from '../assets/help-out.png';
@@ -43,7 +43,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Volunteering() {
-  const classes = useStyles();
+	const classes = useStyles();
+	useEffect(() => {
+		document.title = "Vogro for Volunteers";  
+  });
   return (
 		<>
 			<div className={classes.heroContent}>
