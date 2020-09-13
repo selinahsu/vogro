@@ -69,7 +69,9 @@ class ContactUs extends React.Component {
         Having issues with our service? Want to reach out? Enter in your message and we'll get back to you shortly.
         </Typography>
 
-        <form className={classes.form} onSubmit={this.handleSubmit} name="contact">
+        <form className={classes.form} onSubmit={this.handleSubmit} 
+          name="contact" method="POST" data-netlify="true"
+        >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
