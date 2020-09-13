@@ -49,6 +49,7 @@ function ContactUs() {
         </Typography>
 
         <form className={classes.form}>
+          <input type="hidden" name="form-name" value="contact" />
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
