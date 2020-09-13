@@ -24,7 +24,7 @@ class ContactUs extends React.Component {
     firstName: "",
     lastName: "",
     email: "",
-    msgType: "",
+    type: "",
     message: "",
     open: false
   }
@@ -113,7 +113,7 @@ class ContactUs extends React.Component {
             </Grid>
             <Grid item xs={12} sm={6}>
               <Select
-                name="msgType"
+                name="type"
                 variant="outlined"
                 fullWidth
                 displayEmpty
@@ -121,9 +121,9 @@ class ContactUs extends React.Component {
                 open={this.state.open}
                 onClose={this.handleClose}
                 onOpen={this.handleOpen}
-                value={ this.state.msgType }
+                value={ this.state.type }
                 onChange={(event) => {
-                  this.setState({ msgType: event.target.value })
+                  this.setState({ type: event.target.value })
                 }}
               >
                 <MenuItem value="" disabled>
