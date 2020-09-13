@@ -75,6 +75,7 @@ class ContactUs extends React.Component {
               <Grid item xs={12} sm={6}>
                 <TextField
                   name="firstName"
+                  inputProps={{ 'name': 'firstName' }}
                   autoComplete="fname"
                   variant="outlined"
                   fullWidth
@@ -88,6 +89,7 @@ class ContactUs extends React.Component {
               <Grid item xs={12} sm={6}>
                 <TextField
                   name="lastName"
+                  inputProps={{ 'name': 'lastName' }}
                   autoComplete="lname"
                   variant="outlined"
                   fullWidth
