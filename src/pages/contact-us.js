@@ -25,6 +25,7 @@ class ContactUs extends React.Component {
     lastName: "",
     email: "",
     msgType: "",
+    message: "",
     open: false
   }
 
@@ -45,7 +46,7 @@ class ContactUs extends React.Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact-us", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -73,7 +74,7 @@ class ContactUs extends React.Component {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  name="first name"
+                  name="firstName"
                   autoComplete="fname"
                   variant="outlined"
                   fullWidth
@@ -86,7 +87,7 @@ class ContactUs extends React.Component {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  name="last name"
+                  name="lastName"
                   autoComplete="lname"
                   variant="outlined"
                   fullWidth
@@ -113,11 +114,11 @@ class ContactUs extends React.Component {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Select
-                  displayEmpty
-                  inputProps={{ 'aria-label': 'Without label' }}
-                  name="message type"
+                  name="msgType"
                   variant="outlined"
                   fullWidth
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Without label' }}
                   open={this.state.open}
                   onClose={this.handleClose}
                   onOpen={this.handleOpen}
@@ -142,6 +143,10 @@ class ContactUs extends React.Component {
                   multiline
                   label="Message"
                   inputProps={this.inputProps}
+                  value={ this.state.message }
+                  onChange={(event) => {
+                    this.setState({ message: event.target.value })
+                  }}
                 />
               </Grid>
             </Grid>
