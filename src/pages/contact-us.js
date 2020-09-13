@@ -46,7 +46,7 @@ class ContactUs extends React.Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-us", ...this.state })
+      body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -61,7 +61,7 @@ class ContactUs extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.form} name="contact-us" method="POST" data-netlify="true">
+      <div className={classes.form} name="contact" method="POST" data-netlify="true">
         <Container maxWidth="md">
           <Typography variant="h4" color="black" gutterBottom>
             Contact Us
