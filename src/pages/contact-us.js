@@ -76,6 +76,7 @@ class ContactUs extends React.Component {
             <Grid item xs={12} sm={6}>
               <TextField
                 name="firstName"
+                type="text"
                 autoComplete="fname"
                 variant="outlined"
                 fullWidth
@@ -89,6 +90,7 @@ class ContactUs extends React.Component {
             <Grid item xs={12} sm={6}>
               <TextField
                 name="lastName"
+                type="text"
                 autoComplete="lname"
                 variant="outlined"
                 fullWidth
@@ -131,9 +133,9 @@ class ContactUs extends React.Component {
                 <MenuItem value="" disabled>
                   <em>Please select a message type</em>
                 </MenuItem>
-                <MenuItem value={'Helper'}>Helper</MenuItem>
-                <MenuItem value={'Someone in Need'}>Someone in Need</MenuItem>
-                <MenuItem value={'General Question'}>General Question</MenuItem>
+                <MenuItem value={"Helper"}>Helper</MenuItem>
+                <MenuItem value={"Someone in Need"}>Someone in Need</MenuItem>
+                <MenuItem value={"General Question"}>General Question</MenuItem>
               </Select>
             </Grid>
             <Grid item xs={12}>
