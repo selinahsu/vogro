@@ -5,6 +5,9 @@ import { Container, Typography, TextField, Select, MenuItem, Grid, Button } from
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
+  heroContent: {
+		padding: theme.spacing(6, 0),
+	},
 	form: {
 		padding: theme.spacing(4, 0),
   },
@@ -21,8 +24,7 @@ const encode = (data) => {
 
 class ContactUs extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     type: "",
     message: "",
@@ -61,47 +63,33 @@ class ContactUs extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <Container maxWidth="md">
+      <Container maxWidth="md" className={classes.heroContent}>
         <Typography variant="h4" color="black" gutterBottom>
           Contact Us
         </Typography>
         <Typography variant="body1" color="black" gutterBottom>
-        Having issues with our service? Want to reach out? Enter in your message and we'll get back to you shortly.
+          Having issues with our service? Want to reach out? Enter in your message and we'll get back to you shortly.
         </Typography>
 
         <form className={classes.form} onSubmit={this.handleSubmit} 
           name="contact" method="POST" data-netlify="true"
         >
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
               <TextField
-                name="firstName"
+                name="name"
                 type="text"
-                autoComplete="fname"
                 variant="outlined"
                 fullWidth
-                label="First Name"
-                value={ this.state.firstName }
+                label="Name"
+                value={ this.state.name }
                 onChange={(event) => {
-                  this.setState({ firstName: event.target.value })
+                  this.setState({ name: event.target.value })
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                name="lastName"
-                type="text"
-                autoComplete="lname"
-                variant="outlined"
-                fullWidth
-                label="Last Name"
-                value={ this.state.lastName }
-                onChange={(event) => {
-                  this.setState({ lastName: event.target.value })
-                }}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
+
+            <Grid item xs={12} sm={4}>
               <TextField
                 name="email"
                 type="email"
@@ -115,7 +103,7 @@ class ContactUs extends React.Component {
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
               <Select
                 name="type"
                 variant="outlined"
