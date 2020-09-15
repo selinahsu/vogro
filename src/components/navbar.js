@@ -4,6 +4,29 @@ import { AppBar, Toolbar, Grid } from '@material-ui/core';
 
 import logo from '../assets/logo.png';
 
+const navPages = [
+	{
+		name: "HOME", 
+		path: "/"
+  },
+  {
+		name: "VOLUNTEERING", 
+		path: "/volunteering"
+  },
+  {
+		name: "ELDERLY + AT RISK", 
+		path: "/elderly-and-at-risk"
+  },
+  {
+		name: "FAQ", 
+		path: "/faq"
+  },
+  {
+		name: "CONTACT US", 
+		path: "/contact-us"
+  },
+];
+
 const useStyles = makeStyles((theme) => ({
   appbar: {
     fontFamily: 'Quicksand',
@@ -15,14 +38,18 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '30px',
     paddingLeft: '20px'
   },
-  navlink: {
-    padding: '20px',
+  navLink: {
     color: '#9e9e9e',
     textDecoration: 'none',
     "&:hover": {
       color: '#555555'
     }
   },
+  navItem: {
+    marginTop: '20px',
+    marginLeft: '20px',
+    marginRight: '20px',
+  }
 }));
 
 function Navbar() {
@@ -37,23 +64,15 @@ function Navbar() {
             </a>
           </Grid>
           <Grid item>
-            <nav>
-              <a href="/" className={classes.navlink}>
-                HOME
-              </a>
-              <a href="/volunteering" className={classes.navlink}>
-                VOLUNTEERING
-              </a>
-              <a href="/elderly-and-at-risk" className={classes.navlink}>
-                ELDERLY + AT RISK
-              </a>
-              <a href="/faq" className={classes.navlink}>
-                FAQ
-              </a>
-              <a href="/contact-us" className={classes.navlink}>
-                CONTACT US
-              </a>
-            </nav>
+            <Grid container >
+            {navPages.map((page) => (
+              <div className={classes.navItem}>
+                <a href={ page.path } className={classes.navLink} >
+                  { page.name }
+                </a>
+              </div>
+            ))}
+            </Grid>
           </Grid>
         </Grid>
       </Toolbar>
